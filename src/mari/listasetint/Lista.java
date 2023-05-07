@@ -29,13 +29,14 @@ public class Lista {
 			throw new Exception("Lista vazia");
 		}
 		int tamanho = size();
-		if(pos<0||pos<-1) {
+		if(pos<0||pos>tamanho-1) {
 			throw new Exception("Posição Invalida");
 		}
 		No auxiliar = primeiro;
 		int cont =0;
 		while(cont<pos) {
 			auxiliar= auxiliar.proximo;
+			cont++;
 		}
 		return auxiliar;
 	}
